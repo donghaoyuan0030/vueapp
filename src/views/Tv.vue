@@ -76,10 +76,10 @@ export default {
         fullH = htmlDom.offsetHeight;
         scrollT = htmlDom.scrollTop;
         // 滚动到底部
-        if (fullH == deviceH + scrollT) {
+        if (deviceH + scrollT > fullH - 20) {
+        this.start += 10;
           if (this.start < 40) {
-            // 请求下一页数据
-            this.start += 10;
+            
             this.getData();
           }
         }
